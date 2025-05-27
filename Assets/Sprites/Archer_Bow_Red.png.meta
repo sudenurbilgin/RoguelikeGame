@@ -1,40 +1,46 @@
 fileFormatVersion: 2
-guid: 8dc12ddd80dfc25469ee4d7d4c4a4217
+guid: d359416655d0b0042893186e2d5cf0ed
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6972315418413338663
-    second: Rocks_02_0
+      213: 6621879719761532180
+    second: Archer_Bow_Red_0
   - first:
-      213: -8661709897740801471
-    second: Rocks_02_1
+      213: -5027493556857751391
+    second: Archer_Bow_Red_1
   - first:
-      213: 8824554328431356043
-    second: Rocks_02_2
+      213: 1471423178526637504
+    second: Archer_Bow_Red_2
   - first:
-      213: -6695211258704145448
-    second: Rocks_02_3
+      213: 5381711356807848486
+    second: Archer_Bow_Red_3
   - first:
-      213: -1820314030940062042
-    second: Rocks_02_4
+      213: 2018272972269428440
+    second: Archer_Bow_Red_4
   - first:
-      213: 3976394749612131340
-    second: Rocks_02_5
+      213: 6705607281689757201
+    second: Archer_Bow_Red_5
   - first:
-      213: -5443729802455617797
-    second: Rocks_02_6
+      213: -8823537440155487856
+    second: Archer_Bow_Red_6
   - first:
-      213: 5451828946050965503
-    second: Rocks_02_7
+      213: -1736907535177212932
+    second: Archer_Bow_Red_7
   - first:
-      213: 6111856450617385455
-    second: Rocks_02_8
+      213: 4740330362687764126
+    second: Archer_Bow_Red_8
   - first:
-      213: 8257728822493429651
-    second: Rocks_02_9
+      213: -1226000696888810249
+    second: Archer_Bow_Red_9
   - first:
-      213: 2538111090135613914
-    second: Rocks_02_10
+      213: -5039884926314722745
+    second: Archer_Bow_Red_10
+  - first:
+      213: -3281972243948475544
+    second: Archer_Bow_Red_11
+  - first:
+      213: 8478020320446159523
+    second: Archer_Bow_Red_12
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,43 +132,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rocks_02_0
+      name: Archer_Bow_Red_0
       rect:
         serializedVersion: 2
-        x: 42
-        y: 43
-        width: 43
-        height: 33
+        x: 68
+        y: 259
+        width: 14
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +151,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7209180aee3a2c060800000000000000
-      internalID: 6972315418413338663
+      spriteID: 415dfb95584a5eb50800000000000000
+      internalID: 6621879719761532180
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rocks_02_1
+      name: Archer_Bow_Red_1
       rect:
         serializedVersion: 2
-        x: 169
-        y: 44
-        width: 43
-        height: 32
+        x: 112
+        y: 251
+        width: 19
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,42 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 14aacad5dbc6bc780800000000000000
-      internalID: -8661709897740801471
+      spriteID: 1a8bde03f31ca3ab0800000000000000
+      internalID: -5027493556857751391
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rocks_02_2
+      name: Archer_Bow_Red_2
       rect:
         serializedVersion: 2
-        x: 295
-        y: 43
-        width: 46
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b88694f386d177a70800000000000000
-      internalID: 8824554328431356043
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rocks_02_3
-      rect:
-        serializedVersion: 2
-        x: 422
-        y: 42
+        x: 46
+        y: 62
         width: 48
-        height: 34
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8d35ebc35d4d513a0800000000000000
-      internalID: -6695211258704145448
+      spriteID: 0cd3b5eb59b8b6410800000000000000
+      internalID: 1471423178526637504
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rocks_02_4
+      name: Archer_Bow_Red_3
       rect:
         serializedVersion: 2
-        x: 550
-        y: 40
-        width: 49
-        height: 36
+        x: 96
+        y: 63
+        width: 20
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,20 +217,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6ae78268802fcb6e0800000000000000
-      internalID: -1820314030940062042
+      spriteID: 622a73a27fdafaa40800000000000000
+      internalID: 5381711356807848486
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rocks_02_5
+      name: Archer_Bow_Red_4
       rect:
         serializedVersion: 2
-        x: 679
-        y: 40
-        width: 48
-        height: 36
+        x: 256
+        y: 62
+        width: 55
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,20 +239,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c040c59f4fdfe2730800000000000000
-      internalID: 3976394749612131340
+      spriteID: 8de14e33398520c10800000000000000
+      internalID: 2018272972269428440
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rocks_02_6
+      name: Archer_Bow_Red_5
       rect:
         serializedVersion: 2
-        x: 808
-        y: 45
-        width: 45
-        height: 31
+        x: 475
+        y: 62
+        width: 67
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -303,20 +261,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bfeec67369cf374b0800000000000000
-      internalID: -5443729802455617797
+      spriteID: 116046c7b4a1f0d50800000000000000
+      internalID: 6705607281689757201
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rocks_02_7
+      name: Archer_Bow_Red_6
       rect:
         serializedVersion: 2
-        x: 810
-        y: 42
-        width: 12
-        height: 9
+        x: 641
+        y: 59
+        width: 74
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -325,20 +283,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fff5f899a89c8ab40800000000000000
-      internalID: 5451828946050965503
+      spriteID: 0913c21827f7c8580800000000000000
+      internalID: -8823537440155487856
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rocks_02_8
+      name: Archer_Bow_Red_7
       rect:
         serializedVersion: 2
-        x: 843
-        y: 40
-        width: 11
-        height: 10
+        x: 828
+        y: 59
+        width: 73
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -347,20 +305,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fe1aa315f0da1d450800000000000000
-      internalID: 6111856450617385455
+      spriteID: cfb101e9cc345e7e0800000000000000
+      internalID: -1736907535177212932
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rocks_02_9
+      name: Archer_Bow_Red_8
       rect:
         serializedVersion: 2
-        x: 936
-        y: 43
-        width: 45
-        height: 33
+        x: 1020
+        y: 59
+        width: 73
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -369,20 +327,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 39fb93cdc98599270800000000000000
-      internalID: 8257728822493429651
+      spriteID: e96b00a795909c140800000000000000
+      internalID: 4740330362687764126
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rocks_02_10
+      name: Archer_Bow_Red_9
       rect:
         serializedVersion: 2
-        x: 972
-        y: 41
-        width: 9
-        height: 8
+        x: 1202
+        y: 73
+        width: 14
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -391,8 +349,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ad14308c69e293320800000000000000
-      internalID: 2538111090135613914
+      spriteID: 7f4af8f9cde5cfee0800000000000000
+      internalID: -1226000696888810249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer_Bow_Red_10
+      rect:
+        serializedVersion: 2
+        x: 1265
+        y: 59
+        width: 19
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74a4a2aac5bbe0ab0800000000000000
+      internalID: -5039884926314722745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer_Bow_Red_11
+      rect:
+        serializedVersion: 2
+        x: 1409
+        y: 67
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86b62ccf1a71472d0800000000000000
+      internalID: -3281972243948475544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer_Bow_Red_12
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 57
+        width: 19
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aa9cbe109af7a570800000000000000
+      internalID: 8478020320446159523
       vertices: []
       indices: 
       edges: []
@@ -410,18 +434,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Rocks_02_0: 6972315418413338663
-      Rocks_02_1: -8661709897740801471
-      Rocks_02_10: 2538111090135613914
-      Rocks_02_2: 8824554328431356043
-      Rocks_02_3: -6695211258704145448
-      Rocks_02_4: -1820314030940062042
-      Rocks_02_5: 3976394749612131340
-      Rocks_02_6: -5443729802455617797
-      Rocks_02_7: 5451828946050965503
-      Rocks_02_8: 6111856450617385455
-      Rocks_02_9: 8257728822493429651
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

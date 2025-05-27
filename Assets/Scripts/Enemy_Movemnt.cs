@@ -9,24 +9,36 @@ public class Enemy_Movemnt : MonoBehaviour
     public float attackRange = 2; // Distance to trigger attack animation
 
     private Rigidbody2D rb;
-    public Transform player;
     private Animator anim;
+
+    private Transform player;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         ChangeState(EnemyState.Idle);
+
+        // Player objesini tag �zerinden bul
+        GameObject playerObj = GameObject.FindWithTag("Player");
+        if (playerObj != null)
+        {
+            player = playerObj.transform;
+        }
+        else
+        {
+            Debug.LogError("Player object not found in scene. Make sure it has the tag 'Player'.");
+        }
     }
 
     void Update()
     {
-        Chase(); // Always chase, no stopping
+        if (player == null) return;
+        Chase();
     }
 
     void Chase()
     {
-        // Check if player is in attack range to trigger attack animation
         if (Vector2.Distance(transform.position, player.transform.position) <= attackRange)
         {
             ChangeState(EnemyState.Attacking);
@@ -36,14 +48,12 @@ public class Enemy_Movemnt : MonoBehaviour
             ChangeState(EnemyState.Idle);
         }
 
-        // Flip direction based on player position
         if (player.position.x > transform.position.x && facingDirection == -1 ||
             player.position.x < transform.position.x && facingDirection == 1)
         {
             Flip();
         }
 
-        // Move toward player continuously
         Vector2 direction = (player.position - transform.position).normalized;
         rb.linearVelocity = direction * speed;
     }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2268040783065785978}
   - component: {fileID: 8694346016649253804}
   - component: {fileID: 7351527170146150990}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DamageText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 374866730483528935}
   - component: {fileID: 4237092318957365616}
   - component: {fileID: 5516805615003928064}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 97674635
   m_SortingOrder: 9999
   m_TargetDisplay: 0
 --- !u!114 &4237092318957365616
@@ -250,7 +250,7 @@ GameObject:
   - component: {fileID: 6380453138030598471}
   - component: {fileID: 682304723968584810}
   - component: {fileID: 853846451410884047}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PopUpDamage
   m_TagString: Untagged
   m_Icon: {fileID: 0}

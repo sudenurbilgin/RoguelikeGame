@@ -6,6 +6,8 @@ public class Enemy_Health : MonoBehaviour
 {
     public int currentHealth;
     public int maxHealth;
+    public GameObject expPrefab; // EXP drop prefab
+
 
     private SpriteRenderer spriteRenderer;
     private Color originalColor;
@@ -27,10 +29,21 @@ public class Enemy_Health : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
-        else if(currentHealth <= 0)
+        else if (currentHealth <= 0)
         {
+            if (expPrefab != null)
+            {
+                Debug.Log("Exp prefab exists: " + expPrefab.name);
+                Instantiate(expPrefab, transform.position, Quaternion.identity);
+            }
+            else
+            {
+                Debug.LogError("EXP PREFAB IS NULL ON DEATH for: " + gameObject.name);
+            }
+
             Destroy(gameObject);
         }
+
     }
 
     private IEnumerator FlashOnHit()

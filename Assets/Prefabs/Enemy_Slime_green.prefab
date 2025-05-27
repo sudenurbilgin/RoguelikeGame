@@ -79,9 +79,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1057752935
+  m_SortingLayer: 2
+  m_SortingOrder: 2
   m_Sprite: {fileID: 3945077469886725810, guid: ba495dbd838bb6d479a37d719b094134,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -102,7 +102,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3283919425260056439}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -151,7 +151,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -173,6 +173,7 @@ MonoBehaviour:
   damage: 10
   popUpPrefab: {fileID: 3038764516982260736, guid: 35c8a48773793114f94642e9259773a4,
     type: 3}
+  damageCooldown: 1
 --- !u!95 &6801523230702016218
 Animator:
   serializedVersion: 7
@@ -207,9 +208,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 206c62e25b5be7a4c89265c0c31a1571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 2
   attackRange: 1
-  player: {fileID: 0}
 --- !u!114 &3051703447695765194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,7 +222,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eebe42507b155949865b1918fea2e5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 30
-  maxHealth: 30
+  currentHealth: 20
+  maxHealth: 20
+  expPrefab: {fileID: 8256279977514612873, guid: 585ff6d6ca57dce469458b273525d7e1,
+    type: 3}
   flashColor: {r: 1, g: 0, b: 0, a: 0.6}
   flashDuration: 0.1
