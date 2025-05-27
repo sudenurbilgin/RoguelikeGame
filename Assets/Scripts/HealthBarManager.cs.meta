@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 5203e3bb306ef0e4696c855e13df5ad4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - healthBarImage: {instanceID: 0}
+  - health100: {fileID: -2440113075714348065, guid: 68f5ce1085f1af94ba735d3ccdaf19fe,
+      type: 3}
+  - health60: {fileID: -8482856806774225078, guid: 68f5ce1085f1af94ba735d3ccdaf19fe,
+      type: 3}
+  - health30: {fileID: -2876061337170318566, guid: 68f5ce1085f1af94ba735d3ccdaf19fe,
+      type: 3}
+  - health0: {fileID: 4480969731382933514, guid: 68f5ce1085f1af94ba735d3ccdaf19fe,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

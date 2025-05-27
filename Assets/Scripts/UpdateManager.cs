@@ -68,7 +68,6 @@ public class UpgradeManager : MonoBehaviour
         }
 
         upgradePanel.SetActive(false);
-        Time.timeScale = 1f; // OYUNU DEVAM ETT›R  
+        Time.timeScale = 1f; // OYUNU DEVAM ETT√ùR  
     }
 }
-

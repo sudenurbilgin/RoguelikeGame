@@ -8,27 +8,33 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth;
     public TMP_Text healthText;
     public Animator healthTextAnim;
+    public GameOverManager gameOverManager;
+
 
     private SpriteRenderer spriteRenderer;
     private Color originalColor;
-    public Color flashColor = new Color(1f, 0f, 0f, 0.6f); // Light red
+    public Color flashColor = new Color(1f, 0f, 0f, 0.6f);
     public float flashDuration = 0.1f;
 
     private void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>(); // Make sure this matches your setup
+        spriteRenderer = GetComponent<SpriteRenderer>();
         originalColor = spriteRenderer.color;
 
-        healthText.text = currentHealth.ToString();
+        currentHealth = maxHealth;
+        UpdateHealthText();
     }
 
     public void ChangeHealth(int amount)
     {
         currentHealth += amount;
-        healthTextAnim.Play("TextUpdate");
-        healthText.text = currentHealth.ToString();
 
-        if(amount < 0)
+        // Sağlık 0-100 arasında kalmalı
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+
+        UpdateHealthText();
+
+        if (amount < 0)
         {
             StartCoroutine(FlashOnHit());
         }
@@ -36,7 +42,20 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             gameObject.SetActive(false);
+        }
+        if (currentHealth <= 0)
+{
+        // gameObject.SetActive(false); // Bunu kaldır
+        gameOverManager.ShowGameOver(); // Bunu Ekle
+}
 
+    }
+
+    private void UpdateHealthText()
+    {
+        if (healthText != null)
+        {
+            healthText.text = currentHealth.ToString();
         }
     }
 
@@ -46,5 +65,4 @@ public class PlayerHealth : MonoBehaviour
         yield return new WaitForSeconds(flashDuration);
         spriteRenderer.color = originalColor;
     }
-
 }

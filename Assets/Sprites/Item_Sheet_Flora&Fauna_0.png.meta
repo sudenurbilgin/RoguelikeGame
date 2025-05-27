@@ -153,6 +153,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -609,7 +622,27 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Item_Sheet_Flora&Fauna_0_0: -2403516186984916909
+      Item_Sheet_Flora&Fauna_0_1: 5457183936831185269
+      Item_Sheet_Flora&Fauna_0_10: -2729104602334056352
+      Item_Sheet_Flora&Fauna_0_11: 517267667584137435
+      Item_Sheet_Flora&Fauna_0_12: -7987842864828445823
+      Item_Sheet_Flora&Fauna_0_13: -2178884481460114340
+      Item_Sheet_Flora&Fauna_0_14: 3531839228174293564
+      Item_Sheet_Flora&Fauna_0_15: 4987244684392489390
+      Item_Sheet_Flora&Fauna_0_16: 342123759890337498
+      Item_Sheet_Flora&Fauna_0_17: -2188510523413931143
+      Item_Sheet_Flora&Fauna_0_18: -893216980968624260
+      Item_Sheet_Flora&Fauna_0_19: 2463661142934674372
+      Item_Sheet_Flora&Fauna_0_2: -415730955077173787
+      Item_Sheet_Flora&Fauna_0_3: -3380122040401137344
+      Item_Sheet_Flora&Fauna_0_4: -903426619733110431
+      Item_Sheet_Flora&Fauna_0_5: -4904224066345225998
+      Item_Sheet_Flora&Fauna_0_6: 1200842125268418891
+      Item_Sheet_Flora&Fauna_0_7: 8766306948982327132
+      Item_Sheet_Flora&Fauna_0_8: 5849599240670376354
+      Item_Sheet_Flora&Fauna_0_9: 2528287596216615743
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
