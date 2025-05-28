@@ -1,47 +1,69 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using TMPro;
+
 
 public class PlayerExp : MonoBehaviour
 {
+    public TextMeshProUGUI xpScoreText; // Ekrandaki toplam XP yazÄ±sÄ±
+
+    public TextMeshProUGUI xpText; // UI'daki XP yazÄ±sÄ±
+    public int totalExp = 0; // Toplam XP skoru
     public float pickupRadius = 0.5f;
     public float expMultiplier = 1f;
     public int currentExp = 0;
     public int level = 1;
     public int expToNextLevel = 10;
 
-    public Slider expBar; // EXP barý atanmalý
+    public Slider expBar; // EXP barï¿½ atanmalï¿½
 
-    public UpgradeManager upgradeManager; // Upgrade ekranýný çaðýrmak için
+    public UpgradeManager upgradeManager; // Upgrade ekranï¿½nï¿½ ï¿½aï¿½ï¿½rmak iï¿½in
 
     public void GainExp(int amount)
+{
+    int finalExp = Mathf.RoundToInt(amount * expMultiplier);
+
+    // Level iÃ§in XP
+    currentExp += finalExp;
+
+    // Skor iÃ§in XP
+    totalExp += finalExp;
+
+    UpdateExpBar();
+    UpdateExpScore(); // Yeni fonksiyon
+
+    if (currentExp >= expToNextLevel)
     {
-        int finalExp = Mathf.RoundToInt(amount * expMultiplier); // buff varsa çarpan uygula
-        currentExp += finalExp;
-        UpdateExpBar();
-
-        if (currentExp >= expToNextLevel)
-        {
-            LevelUp();
-        }
+        LevelUp();
     }
-
+}
+    void UpdateExpScore()
+    {
+        if (xpScoreText != null)
+        xpScoreText.text = "Score: " + totalExp;
+    }
 
     void UpdateExpBar()
     {
-        if (expBar != null)
-        {
-            expBar.value = (float)currentExp / expToNextLevel;
-        }
+    if (expBar != null)
+        expBar.value = (float)currentExp / expToNextLevel;
+
+    if (xpText != null)
+        xpText.text = "Score: " + currentExp;
     }
+
 
     void LevelUp()
     {
-        currentExp -= expToNextLevel;
+        currentExp -= expToNextLevel; // sadece bar sÄ±fÄ±rlanÄ±r
         level++;
-        expToNextLevel += 5; // Her seviye daha fazla gerektirir
+        expToNextLevel += 5;
 
-        upgradeManager.ShowUpgradeOptions(); // 3 seçenek sunar
-        UpdateExpBar();
+        upgradeManager.ShowUpgradeOptions();
+        UpdateExpBar(); // sadece slider gÃ¼ncellenir
+        UpdateExpScore(); // LevelUp sonrasÄ± skor metnini gÃ¼ncelle
+
     }
+
 }

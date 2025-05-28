@@ -27,12 +27,12 @@ public class Player_combat : MonoBehaviour
 
     public void Attack()
     {
-        if (timer <= 0)
+        if (timer <= 0 && !anim.GetBool("isAttacking"))
         {
-            anim.SetBool("isAttacking", true);
-
-            timer = cooldown;
+        anim.SetBool("isAttacking", true);
+        timer = cooldown;
         }
+
     }
 
     public void DealDamage()
