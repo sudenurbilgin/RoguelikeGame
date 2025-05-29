@@ -25,8 +25,14 @@ public class StartMenuController : MonoBehaviour
     public void QuitGame()
 {
     Debug.Log("Quit button clicked");
-    Application.Quit();
+
+    #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+    #else
+        Application.Quit();
+    #endif
 }
+
 
 
     public void ToggleMute()
