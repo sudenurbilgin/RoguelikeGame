@@ -16,6 +16,9 @@ public class PlayerExp : MonoBehaviour
     public int level = 1;
     public int expToNextLevel = 10;
 
+    public AudioClip levelUpSound;
+    private AudioSource audioSource;
+
     public Slider expBar; // EXP bar� atanmal�
 
     public UpgradeManager upgradeManager; // Upgrade ekran�n� �a��rmak i�in
@@ -53,9 +56,16 @@ public class PlayerExp : MonoBehaviour
         xpText.text = "Score: " + currentExp;
     }
 
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     void LevelUp()
     {
+        if (levelUpSound != null)
+            audioSource.PlayOneShot(levelUpSound);
+
         currentExp -= expToNextLevel; // sadece bar sıfırlanır
         level++;
         expToNextLevel += 5;

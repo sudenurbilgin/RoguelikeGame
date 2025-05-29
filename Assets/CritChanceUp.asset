@@ -15,4 +15,4 @@ MonoBehaviour:
   upgradeName: CritChanceUp
   description: Crit Chance Up
   icon: {fileID: 0}
-  type: 0
+  type: 6

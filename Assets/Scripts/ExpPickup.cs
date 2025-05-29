@@ -2,31 +2,40 @@ using UnityEngine;
 
 public class ExpPickup : MonoBehaviour
 {
-    public int expValue = 1;
+    public int baseExpValue = 1;
 
     private Transform player;
     private PlayerExp playerExp;
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-        playerExp = player.GetComponent<PlayerExp>();
-    }
-
-    private void Update()
-    {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if (player != null)
+        player = GameObject.FindGameObjectWithTag("Player")?.transform;
+        if (player == null)
         {
-            float distance = Vector2.Distance(transform.position, player.transform.position);
-            float pickupRadius = player.GetComponent<PlayerExp>().pickupRadius;
-            if (distance <= pickupRadius)
-            {
-                player.GetComponent<PlayerExp>().GainExp(expValue);
-                Destroy(gameObject);
-                Debug.Log("EXP collected");
-            }
+            Debug.LogError("Player objesi bulunamadý!");
+            return;
+        }
+
+        playerExp = player.GetComponent<PlayerExp>();
+        if (playerExp == null)
+        {
+            Debug.LogError("PlayerExp componenti Player objesinde bulunamadý!");
         }
     }
 
+    void Update()
+    {
+        if (player == null || playerExp == null) return;
+
+        float distance = Vector2.Distance(transform.position, player.position);
+
+        if (distance <= playerExp.pickupRadius)
+        {
+            int scaledExp = Mathf.RoundToInt(baseExpValue * (1f + (playerExp.level - 1) * 0.5f));
+
+            playerExp.GainExp(scaledExp);
+
+            Destroy(gameObject);
+        }
+    }
 }

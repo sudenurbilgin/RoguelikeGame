@@ -15,4 +15,4 @@ MonoBehaviour:
   upgradeName: ExpandPickupRange
   description: Expand Pickup Range
   icon: {fileID: 0}
-  type: 4
+  type: 2

@@ -10,7 +10,6 @@ public class PlayerHealth : MonoBehaviour
     public Animator healthTextAnim;
     public GameOverManager gameOverManager;
 
-
     private SpriteRenderer spriteRenderer;
     private Color originalColor;
     public Color flashColor = new Color(1f, 0f, 0f, 0.6f);
@@ -28,10 +27,7 @@ public class PlayerHealth : MonoBehaviour
     public void ChangeHealth(int amount)
     {
         currentHealth += amount;
-
-        // Sağlık 0-100 arasında kalmalı
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-
         UpdateHealthText();
 
         if (amount < 0)
@@ -42,13 +38,8 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             gameObject.SetActive(false);
+            gameOverManager.ShowGameOver();
         }
-        if (currentHealth <= 0)
-{
-        // gameObject.SetActive(false); // Bunu kaldır
-        gameOverManager.ShowGameOver(); // Bunu Ekle
-}
-
     }
 
     private void UpdateHealthText()

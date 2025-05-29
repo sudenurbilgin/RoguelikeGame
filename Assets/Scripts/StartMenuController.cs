@@ -8,12 +8,18 @@ public class StartMenuController : MonoBehaviour
     {
         Time.timeScale = 0f; // Oyunu başta durdur
         startMenuPanel.SetActive(true); // Menü paneli görünsün
+       
+        if (MenuMusicManager.instance != null)
+        {
+            MenuMusicManager.instance.PlayMenuMusic();
+        }
     }
 
     public void StartGame()
     {
         startMenuPanel.SetActive(false); // Menü kapanır
         Time.timeScale = 1f; // Oyun devam eder
+        MenuMusicManager.instance.StopMenuMusic();
     }
 
     public void QuitGame()
@@ -25,6 +31,9 @@ public class StartMenuController : MonoBehaviour
 
     public void ToggleMute()
     {
-        AudioListener.pause = !AudioListener.pause;
+        if (MenuMusicManager.instance != null)
+        {
+            MenuMusicManager.instance.Mute();
+        }
     }
 }

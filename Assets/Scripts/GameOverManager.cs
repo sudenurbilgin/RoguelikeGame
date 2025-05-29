@@ -4,16 +4,32 @@ using UnityEngine.SceneManagement;
 public class GameOverManager : MonoBehaviour
 {
     public GameObject gameOverPanel;
+    public GameOverMusicManager musicManager;
 
     private void Start()
     {
         gameOverPanel.SetActive(false);  // Başlangıçta kapalı
+        musicManager = FindObjectOfType<GameOverMusicManager>();
     }
 
     public void ShowGameOver()
     {
         gameOverPanel.SetActive(true);
         Time.timeScale = 0f;
+
+        if (musicManager == null)
+        {
+            musicManager = FindObjectOfType<GameOverMusicManager>();
+        }
+
+        if (musicManager != null)
+        {
+            musicManager.PlayGameOverSound();
+        }
+        else
+        {
+            Debug.LogWarning("GameOverMusicManager not found!");
+        }
     }
 
     public void RestartGame()

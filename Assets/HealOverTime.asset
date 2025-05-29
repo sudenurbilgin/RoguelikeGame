@@ -15,4 +15,4 @@ MonoBehaviour:
   upgradeName: HealOverTime
   description: Recover health each level.
   icon: {fileID: 0}
-  type: 0
+  type: 1

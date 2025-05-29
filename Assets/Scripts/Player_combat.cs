@@ -16,9 +16,16 @@ public class Player_combat : MonoBehaviour
 
     public GameObject popUpPrefab;
 
+    public AudioSource attackAudioSource;
+    public AudioClip attackClip;
 
-    public void Update()
+    void Update()
     {
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            Attack();
+        }
+
         if (timer > 0)
         {
             timer -= Time.deltaTime;
@@ -29,10 +36,14 @@ public class Player_combat : MonoBehaviour
     {
         if (timer <= 0 && !anim.GetBool("isAttacking"))
         {
-        anim.SetBool("isAttacking", true);
-        timer = cooldown;
-        }
+            anim.SetBool("isAttacking", true);
+            timer = cooldown;
 
+            if (attackAudioSource != null && attackClip != null)
+            {
+                attackAudioSource.PlayOneShot(attackClip);
+            }
+        }
     }
 
     public void DealDamage()
@@ -55,8 +66,6 @@ public class Player_combat : MonoBehaviour
             enemies[0].GetComponent<Enemy_Health>().ChangeHealth(-finalDamage);
         }
     }
-
-
 
     public void FinishAttacking()
     {

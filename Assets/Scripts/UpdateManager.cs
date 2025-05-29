@@ -11,8 +11,12 @@ public class UpgradeManager : MonoBehaviour
     public List<TMP_Text> descriptions;
     public List<UpgradeData> allUpgrades = new List<UpgradeData>();
 
+    public AudioClip upgradeSound;
+    private AudioSource audioSource;
+
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         upgradePanel.SetActive(false);
     }
 
@@ -41,6 +45,9 @@ public class UpgradeManager : MonoBehaviour
 
     public void ApplyUpgrade(UpgradeData upgrade)
     {
+        if (upgradeSound != null)
+            audioSource.PlayOneShot(upgradeSound);
+
         switch (upgrade.type)
         {
             case UpgradeType.IncreaseMaxHealth:
