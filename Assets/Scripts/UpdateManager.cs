@@ -23,7 +23,7 @@ public class UpgradeManager : MonoBehaviour
     public void ShowUpgradeOptions()
     {
         upgradePanel.SetActive(true);
-        Time.timeScale = 0f; // OYUNU DURDUR  
+        Time.timeScale = 0f; // stop the game while upgrades are shown
 
         List<UpgradeData> randomUpgrades = new List<UpgradeData>();
         while (randomUpgrades.Count < 3)
@@ -36,11 +36,14 @@ public class UpgradeManager : MonoBehaviour
         for (int i = 0; i < upgradeButtons.Count; i++)
         {
             int index = i;
-            icons[i].sprite = randomUpgrades[i].icon;
-            descriptions[i].text = randomUpgrades[i].description;
+
+            if (descriptions != null && descriptions.Count > i)
+                descriptions[i].text = randomUpgrades[i].description;
+
             upgradeButtons[i].onClick.RemoveAllListeners();
             upgradeButtons[i].onClick.AddListener(() => ApplyUpgrade(randomUpgrades[index]));
         }
+
     }
 
     public void ApplyUpgrade(UpgradeData upgrade)
@@ -75,6 +78,6 @@ public class UpgradeManager : MonoBehaviour
         }
 
         upgradePanel.SetActive(false);
-        Time.timeScale = 1f; // OYUNU DEVAM ETTÝR  
+        Time.timeScale = 1f; // Continue the game
     }
 }

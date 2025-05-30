@@ -6,10 +6,10 @@ using TMPro;
 
 public class PlayerExp : MonoBehaviour
 {
-    public TextMeshProUGUI xpScoreText; // Ekrandaki toplam XP yazısı
+    public TextMeshProUGUI xpScoreText; 
 
-    public TextMeshProUGUI xpText; // UI'daki XP yazısı
-    public int totalExp = 0; // Toplam XP skoru
+    public TextMeshProUGUI xpText; 
+    public int totalExp = 0; 
     public float pickupRadius = 0.5f;
     public float expMultiplier = 1f;
     public int currentExp = 0;
@@ -19,22 +19,22 @@ public class PlayerExp : MonoBehaviour
     public AudioClip levelUpSound;
     private AudioSource audioSource;
 
-    public Slider expBar; // EXP bar� atanmal�
+    public Slider expBar; 
 
-    public UpgradeManager upgradeManager; // Upgrade ekran�n� �a��rmak i�in
+    public UpgradeManager upgradeManager; 
 
     public void GainExp(int amount)
 {
     int finalExp = Mathf.RoundToInt(amount * expMultiplier);
 
-    // Level için XP
+    // XP for level
     currentExp += finalExp;
 
-    // Skor için XP
+    // XP for total score
     totalExp += finalExp;
 
     UpdateExpBar();
-    UpdateExpScore(); // Yeni fonksiyon
+    UpdateExpScore(); 
 
     if (currentExp >= expToNextLevel)
     {
@@ -66,13 +66,13 @@ public class PlayerExp : MonoBehaviour
         if (levelUpSound != null)
             audioSource.PlayOneShot(levelUpSound);
 
-        currentExp -= expToNextLevel; // sadece bar sıfırlanır
+        currentExp -= expToNextLevel; 
         level++;
         expToNextLevel += 5;
 
         upgradeManager.ShowUpgradeOptions();
-        UpdateExpBar(); // sadece slider güncellenir
-        UpdateExpScore(); // LevelUp sonrası skor metnini güncelle
+        UpdateExpBar(); 
+        UpdateExpScore(); 
 
     }
 

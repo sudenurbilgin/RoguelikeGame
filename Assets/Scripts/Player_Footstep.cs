@@ -12,7 +12,7 @@ public class PlayerFootsteps : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        audioSource.loop = true; // ayak sesi s�rekli �alacak �ekilde ayarlanmal�
+        audioSource.loop = true; 
         audioSource.clip = footstepSound;
 
         rb = GetComponent<Rigidbody2D>();
