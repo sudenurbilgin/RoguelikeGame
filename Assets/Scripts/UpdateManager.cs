@@ -7,7 +7,6 @@ public class UpgradeManager : MonoBehaviour
 {
     public GameObject upgradePanel;
     public List<Button> upgradeButtons;
-    public List<Image> icons;
     public List<TMP_Text> descriptions;
     public List<UpgradeData> allUpgrades = new List<UpgradeData>();
 
