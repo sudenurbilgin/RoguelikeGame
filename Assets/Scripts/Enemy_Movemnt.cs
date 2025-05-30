@@ -19,7 +19,7 @@ public class Enemy_Movemnt : MonoBehaviour
         anim = GetComponent<Animator>();
         ChangeState(EnemyState.Idle);
 
-        // Player objesini tag �zerinden bul
+        
         GameObject playerObj = GameObject.FindWithTag("Player");
         if (playerObj != null)
         {
