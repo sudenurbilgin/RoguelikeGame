@@ -5,7 +5,6 @@ public class UpgradeData : ScriptableObject
 {
     public string upgradeName;
     public string description;
-    public Sprite icon;
     public UpgradeType type;
 }
 
