@@ -50,24 +50,6 @@ This project is intentionally **basic and not production-ready**:
 - Enemy AI and balancing are minimal
 - No advanced animations or effects
 - No procedural generation or save system
-- Code prioritizes clarity and learning over optimization
-
-These limitations reflect the **early-stage experience of the team with Unity**.
 
 ---
 
-## 🚀 Motivation
-
-This project was developed to gain hands-on experience with:
-- Game development fundamentals
-- Working with existing codebases
-- Team-based learning and collaboration
-- Iterative development and experimentation
-
-It represents a **learning-focused group effort**, not a finished or original commercial game.
-
----
-
-## 📌 Notes
-
-This repository is shared as part of a portfolio to demonstrate the **learning process, collaboration, and technical curiosity** of the team.
